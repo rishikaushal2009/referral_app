@@ -1,0 +1,31 @@
+<h1>Referral Emails</h1>
+
+<%= form_with(model: @referral_email, url: referral_emails_path, method: :post) do |form| %>
+  <div>
+    <%= form.label :sender_name %>
+    <%= form.text_field :sender_name %>
+  </div>
+
+  <div>
+    <%= form.label :sender_email %>
+    <%= form.email_field :sender_email %>
+  </div>
+
+  <div>
+    <%= form.label :recipient_email %>
+    <%= form.email_field :recipient_email %>
+  </div>
+
+  <%= form.submit 'Send Referral Email' %>
+<% end %>
+
+<h2>Sent Referral Emails</h2>
+<ul>
+  <% @referral_emails.each do |referral_email| %>
+    <li>
+      <strong>Sender:</strong> <%= referral_email.sender_name %><br>
+      <strong>Recipient:</strong> <%= referral_email.recipient_email %><br>
+      <strong>Sent At:</strong> <%= referral_email.sent_at %>
+    </li>
+  <% end %>
+</ul>

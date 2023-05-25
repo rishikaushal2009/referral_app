@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender_name: MyString
+  sender_email: MyString
+  recipient_email: MyString
+  token: MyString
+  sent_at: 2023-05-25 10:28:27
+
+two:
+  sender_name: MyString
+  sender_email: MyString
+  recipient_email: MyString
+  token: MyString
+  sent_at: 2023-05-25 10:28:27
